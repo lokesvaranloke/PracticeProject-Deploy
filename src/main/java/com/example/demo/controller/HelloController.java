@@ -8,24 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloController {
 
-	@RequestMapping("/hello")
+	@RequestMapping("/")
 	@ResponseBody
 	public String hello() {
-		return "hello World";
+		return "Welcome to Phase 5 Practice Project - Deploy in Cloud";
 	}
-	
-	@RequestMapping("/greet")
-	@ResponseBody
-	public String greet(@RequestParam String name) {
-		return "Hello " + name;
-	}
-	
-	@RequestMapping("/add")
-	@ResponseBody
-	public String greet(@RequestParam String operand1, @RequestParam String operand2) {
-		int x = Integer.parseInt(operand1);
-		int y = Integer.parseInt(operand2);
-		return "" + operand1 + " + " + operand2 + " = " + (x + y);
-	}
-	
 }
